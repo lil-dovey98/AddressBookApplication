@@ -13,7 +13,7 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Forenames" class="control-label"></label>
+                <b>Forename(s)</b>
                 <input asp-for="Forenames" class="form-control" />
                 <span asp-validation-for="Forenames" class="text-danger"></span>
             </div>
@@ -23,12 +23,12 @@
                 <span asp-validation-for="Surname" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AddressLineOne" class="control-label"></label>
+                <b>Address Line 1</b>
                 <input asp-for="AddressLineOne" class="form-control" />
                 <span asp-validation-for="AddressLineOne" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AddressLineTwo" class="control-label"></label>
+                <b>Address Line 2 (Optional)</b>
                 <input asp-for="AddressLineTwo" class="form-control" />
                 <span asp-validation-for="AddressLineTwo" class="text-danger"></span>
             </div>
@@ -53,7 +53,7 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MobileNo" class="control-label"></label>
+                <b>Mobile Number</b>
                 <input asp-for="MobileNo" class="form-control" />
                 <span asp-validation-for="MobileNo" class="text-danger"></span>
             </div>

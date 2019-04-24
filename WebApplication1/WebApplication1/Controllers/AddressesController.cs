@@ -61,7 +61,11 @@ namespace WebApplication1.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(address);
+            else
+            {
+                return RedirectToAction(nameof(Create));
+            }
+            
         }
 
         // GET: Addresses/Edit/5
