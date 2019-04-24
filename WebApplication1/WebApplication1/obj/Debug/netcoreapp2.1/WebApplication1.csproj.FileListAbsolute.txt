@@ -30,3 +30,8 @@ D:\InterviewAssignment\AddressBookApplication\WebApplication1\WebApplication1\ob
 D:\InterviewAssignment\AddressBookApplication\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.dll
 D:\InterviewAssignment\AddressBookApplication\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.pdb
 D:\InterviewAssignment\AddressBookApplication\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.csproj.CopyComplete
+D:\InterviewAssignment\AddressBookApplication\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Addresses\Create.g.cshtml.cs
+D:\InterviewAssignment\AddressBookApplication\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Addresses\Delete.g.cshtml.cs
+D:\InterviewAssignment\AddressBookApplication\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Addresses\Details.g.cshtml.cs
+D:\InterviewAssignment\AddressBookApplication\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Addresses\Edit.g.cshtml.cs
+D:\InterviewAssignment\AddressBookApplication\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Addresses\Index.g.cshtml.cs
