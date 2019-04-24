@@ -23,14 +23,14 @@ namespace WebApplication1.Controllers
         // GET: Addresses
         public IActionResult Index(int? page)
         {
-
+            
             if (Request.Method != "GET")
             {
                 page = 1;
             }
             int pageSize = 10;
             int pageNumber = (page ?? 1);
-            return View(_context.Address.ToPagedList(pageNumber, pageSize));
+            return View(_context.Address.OrderBy(Address => Address.Forenames).ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Addresses/Details/5
