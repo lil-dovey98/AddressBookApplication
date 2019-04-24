@@ -18,9 +18,10 @@ namespace WebApplication1.Models
 
         [Required(ErrorMessage = "Please Enter This Field")]//Address 1 Validation
         public string AddressLineOne { get; set; }
-        public string AddressLineTwo { get; set; }
+        public string AddressLineTwo { get; set; } //Address 2 Is Optional
 
         [Required(ErrorMessage = "Please Enter This Field")]//Postcode Validation
+        [Range(6,8, ErrorMessage = "Postcodes Must Be 6-8 Character Including Spaces")]
         public string Postcode { get; set; }
 
         [Required(ErrorMessage = "Please Enter This Field")]//Town Validation
@@ -30,6 +31,7 @@ namespace WebApplication1.Models
         public string Country { get; set; }
 
         [Required(ErrorMessage = "Please Enter This Field")]//Email Validation
+        [EmailAddress(ErrorMessage = "Please Enter In A Correct Email Format")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Please Enter This Field")]//Mobile Validation
