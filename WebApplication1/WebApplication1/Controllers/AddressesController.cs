@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
+using PagedList;
 
 namespace WebApplication1.Controllers
 {
@@ -19,9 +21,16 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Addresses
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-            return View(await _context.Address.ToListAsync());
+
+            if (Request.Method != "GET")
+            {
+                page = 1;
+            }
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            return View(_context.Address.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Addresses/Details/5
