@@ -21,7 +21,8 @@ namespace WebApplication1.Models
         public string AddressLineTwo { get; set; } //Address 2 Is Optional
 
         [Required(ErrorMessage = "Please Enter This Field")]//Postcode Validation
-        [Range(6,8, ErrorMessage = "Postcodes Must Be 6-8 Character Including Spaces")]
+        [MaxLength(8, ErrorMessage = "Postcodes Must Be 6-8 Character Including Spaces")]
+        [MinLength(6, ErrorMessage = "Postcodes Must Be 6-8 Character Including Spaces")]
         public string Postcode { get; set; }
 
         [Required(ErrorMessage = "Please Enter This Field")]//Town Validation
@@ -35,6 +36,7 @@ namespace WebApplication1.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Please Enter This Field")]//Mobile Validation
+        [RegularExpression(@"^(\d{11})$", ErrorMessage = "Please Enter 11 Digits")]
         public string MobileNo { get; set; }
         //stored as a string to avoid incorrect formatting
     }
