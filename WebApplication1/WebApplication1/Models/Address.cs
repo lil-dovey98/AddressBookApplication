@@ -39,5 +39,6 @@ namespace WebApplication1.Models
         [RegularExpression(@"^(\d{11})$", ErrorMessage = "Please Enter 11 Digits")] //Checks the user enters only digits with a length of 11
         public string MobileNo { get; set; }
         //stored as a string to avoid incorrect formatting
+        public byte[] Image { get; set; }
     }
 }
