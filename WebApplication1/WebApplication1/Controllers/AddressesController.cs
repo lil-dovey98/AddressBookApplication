@@ -26,11 +26,11 @@ namespace WebApplication1.Controllers
             
             if (Request.Method != "GET")
             {
-                page = 1;
+                page = 1; //If a page isn't specified, defaults to first page
             }
             int pageSize = 10;
             int pageNumber = (page ?? 1);
-            return View(_context.Address.OrderBy(Address => Address.Forenames).ToPagedList(pageNumber, pageSize));
+            return View(_context.Address.OrderBy(Address => Address.Forenames).ToPagedList(pageNumber, pageSize)); //Orders list by forename
         }
 
         // GET: Addresses/Details/5
@@ -72,7 +72,7 @@ namespace WebApplication1.Controllers
             }
             else
             {
-                return RedirectToAction(nameof(Create));
+                return RedirectToAction(nameof(Create)); //If any fields are invalid, returns to the same page and displays errors
             }
             
         }
@@ -125,7 +125,7 @@ namespace WebApplication1.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(address);
+            return RedirectToAction(nameof(Edit));
 
         }
 

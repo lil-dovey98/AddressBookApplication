@@ -36,7 +36,7 @@ namespace WebApplication1.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Please Enter This Field")]//Mobile Validation
-        [RegularExpression(@"^(\d{11})$", ErrorMessage = "Please Enter 11 Digits")]
+        [RegularExpression(@"^(\d{11})$", ErrorMessage = "Please Enter 11 Digits")] //Checks the user enters only digits with a length of 11
         public string MobileNo { get; set; }
         //stored as a string to avoid incorrect formatting
     }
